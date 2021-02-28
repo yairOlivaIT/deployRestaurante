@@ -1,0 +1,20 @@
+header.px-6.flex.flex-wrap.items-center.py-2.text-gray-600.font-medium.shadow-md.z-auto(class='lg:px-16 lg:py-0' , style = "background-color: #1c1c2c")
+    .flex-1.flex.justify-between.items-center
+        a(href='/', class="text-white")
+            img(src="/img/logo.png", alt="logo", class="w-32 p-1 text-white" , style=" filter: invert(1)")
+    label.pointer-cursor.block(for='menu-toggle' class='lg:hidden')
+        button#hamburger
+            svg.w-8.h-8.toggle.block.border-none.text-white(fill='none' stroke='currentColor' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
+            svg.w-8.h-8.toggle.hidden.border-none.text-white(fill='none' stroke='currentColor' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
+    .toggle.hidden.w-full.transform.duration-700.easy-in-out(class='lg:flex lg:items-center lg:w-auto')
+        nav.mb-2
+            ul.items-center.justify-between.text-gray-900.font-medium.pt-5(class='lg:flex lg:pt-0')
+                li
+                    a.py-3.px-0.block.border-b-2.border-transparent.mb-2.text-white.uppercase(class='lg:p-4 hover:border-yellow-800 lg:mb-0 md:text-sm' href='/menu') Menú
+                li
+                    a.py-3.px-0.block.border-b-2.border-transparent.mb-2.text-white.uppercase(class='lg:p-4 hover:border-yellow-800 lg:mb-0 md:text-sm' href='/testimonios') Testimonios    
+                li
+                    a.py-3.px-0.block.border-b-2.border-transparent.mb-2.text-white.uppercase(class='lg:p-4 hover:border-yellow-800 lg:mb-0 md:text-sm' href='/nosotros') Nosotros
+            

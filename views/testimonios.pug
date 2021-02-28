@@ -1,0 +1,31 @@
+extends ./layout/index
+
+block contenido
+    h2.py-12.text-gray-600.text-center #{pagina}
+            .container.m-auto
+            include ./layout/bloque-testimonios
+            hr.text-gray-900.m-10
+            .grid.grid-cols-1.justify-center.items-center.mt-10
+                h2
+                    | Agregar un Testimonio
+
+                    if(errores)
+                        each error in errores 
+                            .flex.justify-center.m-auto.mt-5(role='alert',style="width:50%")
+                                .border.border-red-300.rounded-b.bg-red-100.px-4.py-3.text-red-700.w-full
+                                    p #{error.nombre}
+                                    p #{error.email}
+                                    p #{error.mensaje}
+
+
+                form(action="/testimonios", method="POST" , class="p-5 md:p-0")  
+                    .flex.flex-1.justify-center.items-center.text-gray-800
+                        input#nombre.text-xl(type="text",placeholder="Tu nombre", name="nombre",value= nombre , class="inputs")
+                    .flex.flex-1.justify-center.items-center.text-gray-800
+                        input#email.text-xl(type="email",placeholder="Tu email", name="email",value= email, class="inputs")
+                    .flex.flex-1.justify-center.items-center.text-gray-800
+                        textarea#mensaje.text-xl(name="mensaje",placeholder="Tu mensaje", cols="40", rows="6", class="inputs")= mensaje
+
+                    input.btn.btn-success.text-2xl(type="submit",class="md:text-xl") 
+                    
+            hr.text-gray-900.m-12

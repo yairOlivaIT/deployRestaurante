@@ -1,0 +1,30 @@
+extends ./layout/index
+
+block contenido
+    h2.text-center.text-gray-600.mt-5 #{pagina}
+            .container.m-auto
+                .grid.grid-cols-1(class='md:grid-cols-2 md:p-8')
+                    .p-5
+                        img.w-full.h-full.object-cover.rounded-lg(src="/img/nosotros.jpg", alt="")
+                    .text-center.py-5.text-gray-800(class='md:text-left md: p-8') 
+                        p.p-2.text-xl Restaurant Brands es actualmente una referencia dentro del mundo de la gastronomía porteña. Se trata del típico restaurante steak-house americano, pero anclado en Buenos Aires, y en este caso, más precisamente en el barrio de Palermo. Un lugar perfecto para compartir una deliciosa comida, celebrar y degustar una amplia variedad de platos. El local se encuentra sobre el Hipódromo de Buenos Aires, a través de un moderno salón, con capacidad para 150 cubiertos y ofreciendo la comodidad a través de sus destacados sillones de cuero con respaldo, los cuales generan intimidad a nuestra experiencia gastronómica. Además, propone una amplia terraza al aire libre con vista a la pista de carreras y una barra con vista a todo el salón. Su cocina, de un tradicional steak house americano, destaca presentaciones como las ribs de cerdo acompañadas con puré de papas y ensalada; la hamburguesa casera con panceta, cebolla, salsa hickory, mix de quesos, papas fritas y cole-slaw; o el bife de chorizo asado a la leña y acompañado de papas fritas y ensalada.Allí también hay lugar para las pastas, como los linguini en salsa de tomate especial, con aros de calamar, camarones y mejillones. Y para el gran final: tiramisú o brownie con helado de crema americana.
+            
+            .listado-iconos
+                .container.m-auto.mt-5.py-5.pb-10
+                    .grid.grid-cols-1(class="md:grid-cols-3")
+                        .text-center.text-gray-800.mt-8(class="md:mt-0")
+                            img(src="/img/price.svg", alt="" class="m-auto")
+                            h2.text-3xl.p-5 Precio
+                            p.pl-8.pr-8 
+                                | Nuestra meta es dejar 100% satisfechos a nuestros clientes, brindándoles el mejor precio y calidad, para lograr una experiencia Culinaria inolvidable y satisfactoria.Estamos entusiasmados por mejorar día con día y ver crecer nuestro proyecto.
+                        .text-center.text-gray-800.mt-8(class="md:mt-0")
+                            img(src="/img/menu.svg", alt="" class="m-auto")
+                            h2.text-3xl.p-5 Menú
+                            p.pl-8.pr-8 
+                                | Nuestra oferta gastronómica parece sencilla, pero lo que nos diferencia de los demás es nuestro toque de originalidad en cada plato. Los ingredientes que utilizamos en la elaboración de cada receta son de calidad, nuestros platos se preparan al momento.
+                        .text-center.text-gray-800.mt-8(class="md:mt-0")
+                            img(src="/img/calidad.svg", alt="" class="m-auto")
+                            h2.text-3xl.p-5 Calidad
+                            p.pl-6.pr-6
+                                | Las combinaciones creativas y la utilización de productos de primera calidad hacen de nuestros platos una excelente opción con la mejor relación calidad precio. En Restaurant Brands tenemos como objetivo transformar el concepto de comida en una opción apetitosa y saludable, un lugar donde puedas comer sin arrepentimientos.
+

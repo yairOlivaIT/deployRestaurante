@@ -1,0 +1,48 @@
+extends ./layout/index
+
+block slider
+    .slider.home 
+        h1 #{titulo}
+        img(src="/img/logo.png", alt="logo",style=" filter: invert(1)")   
+        em #{texto} 
+
+block contenido
+        main.container.m-auto.mt-5
+            h2.text-center.mb-5.text-gray-600.p-5.m-0 Sobre Nosotros
+                .grid.grid-cols-1(class='md:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8 md:py-16')
+                    .text-center.py-5.text-gray-900(class='md:text-left') 
+                        p(class='md:pr-5') Disfrute de nuestros deliciosos platos en la comodidad de un ameno ambiente familiar. Situados en la mejor zona de la ciudad, nuestra cocina ofrece un delicioso menú, para que disfrute de la más exquisita comida regional. El ambiente y decoración de nuestro restaurante, es uno de los mayores atractivos para quienes nos visitan y se relajan en nuestras cómodas sillas con pequeñas y curiosas mesas de mármol, y disfrutan de buena compañía y comida exquisita. La música, la atención, el bar y la cocina, todo se combina de forma perfecta para que disfrute de un agradable momento en RESTAURANT BRANDS.
+                    .col-start-1.flex(class='sm:col-start-2 sm:row-span-3')
+                        .w-full.grid.grid-cols-3.grid-rows-2.gap-2
+                            .col-span-3.row-span-2.py-5(class='md:col-span-2 md:p-0')
+                                img.w-full.h-full.object-cover.rounded-lg.bg-gray-100(src='/img/imagen-fondo.jpg' alt='',class='sm:rounded-lg')
+                            .hidden(class='md:block')
+                                img.inset-0.w-full.h-full.object-cover.rounded-lg.bg-gray-100(src='/img/imagen-fondo.jpg' alt='')
+                            .hidden(class='md:block')
+                                img.inset-0.w-full.h-full.object-cover.rounded-lg.bg-gray-100(src='/img/imagen-fondo.jpg' alt='')
+        .descuento
+            .container 
+                .grid.grid-cols-1
+                    .contenido
+                        h3.pl-6.pt-3.text-3xl(class='md:pl-24') -30% de descuento en carta
+                        p.titulo.pl-6.pt-2(class='md:pl-24') Cena para 2 o 4 personas
+                        p.fecha.pl-6.pt-2.text-2xl(class='md:pl-24') 20 de Marzo de 2021 - 28 de Marzo de 2021
+                        p.precio.pl-6.pt-2(class='md:pl-24') Precio $ 3400
+
+        h2.py-12.text-center.text-gray-600 Nuestros Platos
+            .container
+            include ./layout/bloque-platos
+
+
+        .promocion
+            .container 
+                .grid.grid-cols-1
+                    .contenido-promocion
+                        p.titulo(class='md:pl-24') Todos los jueves 
+                        p.titulo(class='md:pl-24') Cena con nosotros
+                        p.subtitulo.pl-6.pt-2.text-3xl(class='md:pl-24') Segundo plato a mitad de precio
+
+
+        h2.py-12.text-center.text-gray-600 Testimonios
+            .container
+            include ./layout/bloque-testimonios
